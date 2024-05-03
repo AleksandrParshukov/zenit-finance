@@ -1,0 +1,249 @@
+.news {
+  padding-block: 48px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item {
+    max-width: 1026px;
+    padding: 40px 24px;
+    background-color: $white;
+    border-radius: 2px;
+  }
+
+  &__caption {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $primary-muted;
+    margin-top: 16px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__back-link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.1;
+    color: #bbbdcb;
+    height: min-content;
+    padding-block: 10px;
+    order: 2;
+  }
+
+  &__content {
+    max-width: 1028px;
+    padding: 40px 24px;
+    background-color: $white;
+    border-radius: 2px;
+  }
+
+  &__title {
+    font-size: 48px;
+  }
+
+  &__short-desc {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    padding-block: 56px 32px;
+  }
+
+  &__long-desc {
+    blockquote {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: $white;
+      padding: 32px 48px 32px 24px;
+      background-color: $secondary;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      p {
+        font-size: 24px;
+      }
+
+      > footer {
+        font-family: 'Golos Text', sans-serif;
+        font-size: 16px;
+        text-align: end;
+      }
+
+      &::before {
+        content: '«';
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 1.1;
+      }
+    }
+
+    h2,
+    h3,
+    h4 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-block: 32px 16px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    p,
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style: inside;
+
+      li::marker {
+        color: $secondary;
+      }
+    }
+
+    ol {
+      padding-left: 1.25em;
+    }
+
+    small {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $primary-muted;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .news {
+    &__item {
+      max-width: 100%;
+      padding: 24px 16px;
+    }
+
+    &__caption {
+      font-size: 20px;
+    }
+
+    &__date {
+      margin-top: 12px;
+    }
+
+    .wrapper {
+      flex-direction: column;
+    }
+
+    &__back-link {
+      margin-block: 16px;
+      order: 0;
+    }
+
+    &__title {
+      font-size: 40px;
+    }
+
+    &__short-desc {
+      padding-block: 56px 32px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .news {
+    padding-block: 40px;
+
+    &__content {
+      padding: 40px 16px;
+    }
+
+    &__short-desc {
+      padding-block: 40px 32px;
+    }
+
+    &__long-desc {
+      blockquote {
+        padding: 24px 16px;
+
+        p {
+          font-size: 24px;
+        }
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .news {
+    padding-block: 32px;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__short-desc {
+      padding-block: 32px;
+    }
+
+    &__long-desc {
+      blockquote p {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+  }
+}

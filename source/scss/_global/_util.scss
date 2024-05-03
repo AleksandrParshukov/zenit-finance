@@ -1,0 +1,125 @@
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 32px;
+  margin-inline: auto;
+}
+
+.btn {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.1;
+  color: $white;
+  padding: 16px 32px 20px;
+  background-color: $secondary;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    box-shadow: none;
+  }
+
+  &:active {
+    background-color: $secondary-active;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    color: $secondary-disabled;
+    box-shadow: none;
+  }
+
+  &--outline {
+    color: $secondary;
+    background-color: transparent;
+    border: 1px solid currentColor;
+
+    &:hover,
+    &:focus {
+      color: $secondary;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: $secondary-active;
+      background-color: transparent;
+    }
+
+    &:disabled {
+      color: $secondary;
+      border-color: $secondary-disabled;
+    }
+  }
+}
+
+.h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.1;
+  color: $primary;
+
+  > span {
+    color: $secondary;
+  }
+}
+
+.h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.block-title {
+  margin-block: 48px;
+}
+
+@media (max-width: $lg) {
+  .wrapper {
+    max-width: 1024px;
+    padding-inline: 24px;
+  }
+
+  .h1,
+  .h2 {
+    font-size: 40px;
+  }
+
+  .h3 {
+    font-size: 24px;
+  }
+
+  .block-title {
+    margin-block: 32px;
+  }
+}
+
+@media (max-width: $md) {
+  .wrapper {
+    max-width: 600px;
+    padding-inline: 16px;
+  }
+
+  .h1,
+  .h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: $sm) {
+  .block-title {
+    margin-block: 24px;
+  }
+}

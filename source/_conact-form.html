@@ -1,0 +1,44 @@
+<section class="contact-form">
+  <div class="wrapper">
+    <h2 class="contact-form__title h2">Заявка на получение финансирования</h2>
+    <p class="contact-form__text">Пора заняться бизнесом, а не поиском финансов</p>
+
+    <form class="contact-form__form js_contact_form" action="">
+      <div class="contact-form__group">
+        <label class="contact-form__label" for="phone">Номер телефона</label>
+        <input class="contact-form__input" type="text" id="phone" name="phone" placeholder="+7" required>
+      </div>
+      <div class="contact-form__group">
+        <label class="contact-form__label" for="company">Название компании</label>
+        <input class="contact-form__input" type="text" id="company" name="company" placeholder="Юридическое" required>
+      </div>
+      <div class="contact-form__group">
+        <label class="contact-form__label" for="name">Как к вам обращаться</label>
+        <input class="contact-form__input" type="text" id="name" name="name" placeholder="Имя" required>
+      </div>
+
+      <button class="contact-form__submit btn js_form_submit">Получить финансирование</button>
+
+      <p class="contact-form__note">
+        Нажимая на кнопку «Получить финансирование» вы соглашаетесь с <a href="/policy.html">политикой
+          конфидециальности</a>
+      </p>
+    </form>
+  </div>
+
+  <div class="wrapper contact-form__success js_contact_form_success">
+    <h2 class="modal__title h2">Ваши данные успешно отправлены</h2>
+    <p class="contact-form__text">Ожидайте звонка от менеджера</p>
+
+    <img class="modal__img" src="./img/success.png" width="237" height="200" alt="">
+
+    <div class="modal__bottom">
+      <button class="modal__btn btn">Хорошо</button>
+
+      <p class="modal__note">
+        Если вам нужно скорее — позвоните нам на горячую линию, звонок по России бесплатный
+      </p>
+      <a class="modal__phone" href="tel:+78005002699">+7 (800) 500–26–99</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+@import 'mixins/_rounded.scss';
+
+@import '_global/variables.scss';
+@import '_global/global.scss';
+@import '_global/util.scss';
+
+@import '_blocks/header';
+@import '_blocks/burger-menu';
+@import '_blocks/main-nav';
+@import '_blocks/main';
+@import '_blocks/banner';
+@import '_blocks/advantages';
+@import '_blocks/approach';
+@import '_blocks/benefits';
+@import '_blocks/contact-form';
+@import '_blocks/footer';
+@import '_blocks/page-top';
+@import '_blocks/products';
+@import '_blocks/agents';
+@import '_blocks/ag-conditions';
+@import '_blocks/ag-statistic';
+@import '_blocks/news';
+@import '_blocks/policy';
+@import '_blocks/modal';

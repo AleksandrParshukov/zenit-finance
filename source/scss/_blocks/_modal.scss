@@ -1,0 +1,98 @@
+.modal {
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  inset: 0;
+  transform: translate(-100%);
+  display: block;
+  transition: transform 0s 0.3s;
+
+  &.open {
+    transform: translate(0);
+    transition: transform 0s 0s;
+
+    .modal__window {
+      transform: translateX(0);
+    }
+  }
+
+  &__window {
+    width: 588px;
+    padding: 16px 24px 40px 24px;
+    background-color: #fff;
+    box-shadow: 0 0 30px 0 rgba(17, 13, 58, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+
+    &--left {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    &--right {
+      right: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  &__close {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.1;
+    color: #bbbdcb;
+    padding-block: 10px;
+    margin-bottom: 13px;
+    margin-left: auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .contact-form__form {
+    width: 100%;
+    padding-inline: 48px;
+  }
+
+  &__bottom {
+    padding-inline: 48px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__note {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1;
+    text-align: center;
+    color: #bbbdcb;
+  }
+
+  &__phone {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 8px;
+    margin-inline: auto;
+  }
+
+  &__img {
+    width: 237px;
+    height: 200px;
+    margin-top: 40px;
+    margin-inline: auto;
+  }
+
+  &__btn {
+    margin-bottom: 48px;
+  }
+}

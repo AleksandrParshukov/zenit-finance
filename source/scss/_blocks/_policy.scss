@@ -1,0 +1,187 @@
+.policy {
+  &__top {
+    padding-block: 48px;
+    background-color: $white;
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr max-content;
+    }
+  }
+
+  &__menu {
+    margin-top: 32px;
+  }
+
+  &__link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.1;
+    color: #bbbdcb;
+    padding-block: 10px;
+    display: block;
+  }
+
+  &__back-link {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    max-width: 1026px;
+    padding-block: 16px 40px;
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1.1;
+      margin-block: 32px 16px;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-block: 16px 4px;
+    }
+
+    small {
+      font-size: 1em;
+      color: $primary-muted;
+    }
+
+    ol {
+      list-style: none;
+    }
+
+    ol li {
+      position: relative;
+    }
+
+    // > ol {
+    //   counter-reset: li;
+    // }
+
+    > ol > li {
+      counter-increment: li;
+    }
+
+    > ol ol {
+      counter-reset: lili;
+      padding-left: 2.5em;
+    }
+
+    > ol ol > li {
+      counter-increment: lili;
+    }
+
+    > ol ol ol {
+      counter-reset: lilili;
+      padding-left: 3em;
+    }
+
+    > ol ol ol > li {
+      counter-increment: lilili;
+    }
+
+    > ol ol ol ol {
+      counter-reset: lililili;
+      padding-left: 3.75em;
+    }
+
+    > ol ol ol ol > li {
+      counter-increment: lililili;
+    }
+
+    > ol li::before {
+      content: counter(li) '.';
+      font-family: 'Open Sans', sans-serif;
+      // counter-increment: li;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1.1;
+      position: absolute;
+      left: -2em;
+    }
+
+    > ol ol li::before {
+      content: counter(li) '.' counter(lili) '.';
+      // counter-increment: lili;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.2;
+      left: -2.5em;
+    }
+
+    > ol ol ol li::before {
+      content: counter(li) '.' counter(lili) '.' counter(lilili) '.';
+      // counter-increment: lilili;
+      left: -3em;
+    }
+
+    > ol ol ol ol li::before {
+      content: counter(li) '.' counter(lili) '.' counter(lilili) '.' counter(lililili) '.';
+      // counter-increment: lililili;
+      left: -3.75em;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .policy {
+    &__top {
+      .wrapper {
+        display: block;
+      }
+    }
+
+    &__back-link {
+      display: none;
+    }
+
+    &__text {
+      padding-block: 8px 32px;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      > ol ol,
+      > ol ol ol,
+      > ol ol ol ol {
+        padding-left: 0;
+      }
+
+      > ol ol li::before,
+      > ol ol ol li::before,
+      > ol ol ol ol li::before {
+        left: -4em;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .policy {
+    &__text {
+      padding-block: 0 24px;
+
+      h2 {
+        font-size: 18px;
+      }
+
+      > ol {
+        padding-left: 4em;
+      }
+    }
+  }
+}

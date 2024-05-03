@@ -1,0 +1,41 @@
+@mixin round-left {
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  @media (max-width: $lg) {
+    border-top-left-radius: 140px;
+    border-bottom-left-radius: 140px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@mixin round-right {
+  border-top-right-radius: 300px;
+  border-bottom-right-radius: 300px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  @media (max-width: $lg) {
+    border-top-right-radius: 140px;
+    border-bottom-right-radius: 140px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@mixin round-top {
+  border-top-right-radius: 300px;
+  border-top-left-radius: 300px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+  @media (max-width: $lg) {
+    border-top-right-radius: 140px;
+    border-top-left-radius: 140px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
