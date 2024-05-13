@@ -276,9 +276,12 @@ button {
   left: 50%;
   transform: translateX(-50%);
   transition: width 0.3s ease;
+  z-index: 2;
 }
-.main-nav__link:hover::after, .main-nav__link:focus::after,
-.main-nav__link .current {
+.main-nav__link:hover, .main-nav__link:focus, .main-nav__link.current {
+  color: #0b1047;
+}
+.main-nav__link:hover::after, .main-nav__link:focus::after, .main-nav__link.current::after {
   width: 100%;
 }
 .main-nav__phone-wrap {
@@ -501,6 +504,9 @@ button {
   opacity: 1;
   position: static;
   transition: all 0.3s ease;
+}
+.banner .slick-dots li button:hover::before {
+  background-color: #bbbdcb;
 }
 .banner .slick-dots li.slick-active button {
   background-color: rgba(16, 200, 210, 0.3);
@@ -2133,4 +2139,90 @@ button {
 }
 .modal__btn {
   margin-bottom: 48px;
+}
+
+@media (max-width: 1439.5px) {
+  .modal__title {
+    font-size: 28px;
+  }
+  .modal .contact-form__form {
+    padding-inline: 0;
+  }
+  .modal__bottom {
+    padding-inline: 0;
+  }
+  .modal__img {
+    width: 213px;
+    height: 180px;
+  }
+  .modal__btn {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 1023.5px) {
+  .modal__window {
+    width: 100%;
+  }
+}
+@media (max-width: 599.5px) {
+  .modal__title {
+    font-size: 20px;
+  }
+  .modal__bottom {
+    padding-inline: 0;
+  }
+  .modal__img {
+    width: 142px;
+    height: 120px;
+  }
+  .modal__btn {
+    width: 100%;
+  }
+}
+.cookie {
+  width: 689px;
+  padding: 32px 24px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 0 10px 0 rgba(17, 13, 58, 0.1);
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+.cookie p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+}
+.cookie p + p {
+  margin-top: 8px;
+}
+.cookie a {
+  font: inherit;
+  color: #10c8d2;
+}
+.cookie .btn {
+  margin-top: 16px;
+}
+
+@media (max-width: 1439.5px) {
+  .cookie {
+    width: 500px;
+  }
+}
+@media (max-width: 1023.5px) {
+  .cookie {
+    padding: 24px 16px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media (max-width: 599.5px) {
+  .cookie {
+    width: auto;
+    right: 5vw;
+    left: 5vw;
+    bottom: 5vw;
+  }
 }

@@ -65,6 +65,10 @@
       position: static;
       transition: all 0.3s ease;
     }
+
+    &:hover::before {
+      background-color: #bbbdcb;
+    }
   }
 
   .slick-dots li.slick-active button {

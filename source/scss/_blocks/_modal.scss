@@ -96,3 +96,57 @@
     margin-bottom: 48px;
   }
 }
+
+@media (max-width: $lg) {
+  .modal {
+    &__title {
+      font-size: 28px;
+    }
+
+    .contact-form__form {
+      padding-inline: 0;
+    }
+
+    &__bottom {
+      padding-inline: 0;
+    }
+
+    &__img {
+      width: 213px;
+      height: 180px;
+    }
+
+    &__btn {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .modal {
+    &__window {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .modal {
+    &__title {
+      font-size: 20px;
+    }
+
+    &__bottom {
+      padding-inline: 0;
+    }
+
+    &__img {
+      width: 142px;
+      height: 120px;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+}

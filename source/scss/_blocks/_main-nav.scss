@@ -32,11 +32,18 @@
       left: 50%;
       transform: translateX(-50%);
       transition: width 0.3s ease;
+      z-index: 2;
+    }
+
+    &:hover,
+    &:focus,
+    &.current {
+      color: $primary;
     }
 
     &:hover::after,
     &:focus::after,
-    .current {
+    &.current::after {
       width: 100%;
     }
   }

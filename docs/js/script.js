@@ -106,11 +106,23 @@ function init_modals() {
   });
 }
 
+function init_cookie() {
+  const $cookie = $('.cookie'),
+    $close = $cookie.find('.js_cookie_close');
+
+  $close.on('click', function (evt) {
+    evt.preventDefault();
+
+    $cookie.hide();
+  });
+}
+
 $(document).ready(function () {
   init_menu();
   init_carousel();
   init_contact_form();
   init_modals();
+  init_cookie();
 
   $('.products').tabs();
 });
