@@ -2,7 +2,7 @@
   background-color: $white;
   display: flex;
   position: relative;
-  z-index: 1000;
+  z-index: 2000;
 
   &::after {
     content: '';

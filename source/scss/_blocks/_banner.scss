@@ -1,6 +1,8 @@
 .banner {
   padding-block: 72px;
   background-color: $white;
+  position: relative;
+  z-index: 0;
 
   &__slider {
     visibility: hidden;
