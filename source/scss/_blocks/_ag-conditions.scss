@@ -150,7 +150,9 @@
 
 @media (max-width: $sm) {
   .ag-conditions {
-    padding-bottom: 32px;
+    &__list {
+      padding-bottom: 32px;
+    }
 
     &__sub-list {
       --column-width: 135px;

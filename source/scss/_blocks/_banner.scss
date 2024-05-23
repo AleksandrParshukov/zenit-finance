@@ -2,6 +2,10 @@
   padding-block: 72px;
   background-color: $white;
 
+  &__slider {
+    visibility: hidden;
+  }
+
   &__item {
     display: flex !important;
   }
@@ -30,6 +34,11 @@
   &__img {
     width: 446px;
     height: 446px;
+    margin-left: auto;
+  }
+
+  .slick-initialized {
+    visibility: visible;
   }
 
   .slick-dots {
@@ -141,7 +150,7 @@
 
     &__title {
       max-width: 600px;
-      margin-block: 48px 24px;
+      margin: 48px auto 24px;
     }
 
     &__text {
@@ -152,6 +161,7 @@
     &__img {
       width: 222px;
       height: 222px;
+      margin-left: 0;
       order: 1;
     }
 

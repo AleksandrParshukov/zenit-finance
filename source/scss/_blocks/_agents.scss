@@ -5,3 +5,11 @@
     gap: 32px 24px;
   }
 }
+
+@media (max-width: $sm) {
+  .agents {
+    .h2 {
+      font-size: 20px;
+    }
+  }
+}

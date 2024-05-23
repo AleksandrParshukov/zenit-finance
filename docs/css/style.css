@@ -151,7 +151,7 @@ button {
 
 @media (max-width: 1439.5px) {
   .wrapper {
-    max-width: 1024px;
+    max-width: 100%;
     padding-inline: 24px;
   }
   .h1,
@@ -167,7 +167,6 @@ button {
 }
 @media (max-width: 1023.5px) {
   .wrapper {
-    max-width: 600px;
     padding-inline: 16px;
   }
   .h1,
@@ -311,6 +310,7 @@ button {
     flex-wrap: wrap;
   }
   .main-nav__menu {
+    width: 100%;
     margin-inline: 0 auto;
     order: 4;
   }
@@ -449,6 +449,9 @@ button {
   padding-block: 72px;
   background-color: #ffffff;
 }
+.banner__slider {
+  visibility: hidden;
+}
 .banner__item {
   display: flex !important;
 }
@@ -473,6 +476,10 @@ button {
 .banner__img {
   width: 446px;
   height: 446px;
+  margin-left: auto;
+}
+.banner .slick-initialized {
+  visibility: visible;
 }
 .banner .slick-dots {
   position: static;
@@ -566,7 +573,7 @@ button {
   }
   .banner__title {
     max-width: 600px;
-    margin-block: 48px 24px;
+    margin: 48px auto 24px;
   }
   .banner__text {
     font-size: 16px;
@@ -575,6 +582,7 @@ button {
   .banner__img {
     width: 222px;
     height: 222px;
+    margin-left: 0;
     order: 1;
   }
   .banner__btn {
@@ -642,7 +650,7 @@ button {
   }
 }
 @media (max-width: 599.5px) {
-  .advantages {
+  .advantages__list {
     padding-block: 32px;
   }
 }
@@ -896,7 +904,7 @@ button {
 }
 @media (max-width: 599.5px) {
   .benefits {
-    padding-block: 40px;
+    padding-block: 32px;
   }
   .benefits__list {
     gap: 16px;
@@ -997,11 +1005,11 @@ button {
 .contact-form__input.error {
   border-color: #da2b2b;
 }
-.contact-form ::-moz-placeholder {
+.contact-form__input::-moz-placeholder {
   color: #9da0b4;
   opacity: 1;
 }
-.contact-form ::placeholder {
+.contact-form__input::placeholder {
   color: #9da0b4;
   opacity: 1;
 }
@@ -1362,7 +1370,7 @@ button {
   font-size: 20px;
   line-height: 1.2;
   color: #9da0b4;
-  margin-block: 24px 48px;
+  margin-block: 24px 56px;
 }
 .products__link {
   width: -moz-max-content;
@@ -1390,6 +1398,9 @@ button {
 }
 .products__long-desc p + p {
   margin-top: 32px;
+}
+.products__lists-title {
+  font-size: 40px;
 }
 
 @media (max-width: 1439.5px) {
@@ -1420,6 +1431,12 @@ button {
   }
   .products__long-desc > .wrapper > * {
     max-width: 754px;
+  }
+  .products__lists-title {
+    font-size: 28px;
+  }
+  .products .advantages__list {
+    padding-top: 0;
   }
 }
 @media (max-width: 1023.5px) {
@@ -1456,6 +1473,19 @@ button {
   }
   .products__desc {
     margin-block: 24px 32px;
+  }
+  .products .advantages__list {
+    padding-top: 40px;
+  }
+  .products .benefits__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .products .benefits__item {
+    width: 100%;
+  }
+  .products .benefits__item--main {
+    grid-column: span 2;
   }
 }
 @media (max-width: 599.5px) {
@@ -1508,6 +1538,16 @@ button {
   .products__long-desc p + p {
     margin-top: 24px;
   }
+  .products__lists-title {
+    font-size: 20px;
+  }
+  .products .advantages__list {
+    padding-top: 32px;
+  }
+  .products .benefits__list {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .agents .advantages__list {
   padding-top: 0;
@@ -1515,6 +1555,11 @@ button {
   gap: 32px 24px;
 }
 
+@media (max-width: 599.5px) {
+  .agents .h2 {
+    font-size: 20px;
+  }
+}
 .ag-conditions__list {
   padding-bottom: 48px;
   display: grid;
@@ -1645,7 +1690,7 @@ button {
   }
 }
 @media (max-width: 599.5px) {
-  .ag-conditions {
+  .ag-conditions__list {
     padding-bottom: 32px;
   }
   .ag-conditions__sub-list {
@@ -1672,6 +1717,7 @@ button {
   background-color: #ffffff;
 }
 .ag-statistic__caption {
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 1;
@@ -1798,8 +1844,7 @@ button {
   line-height: 1.1;
 }
 .news__long-desc h2,
-.news__long-desc h3,
-.news__long-desc h4 {
+.news__long-desc h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   line-height: 1.1;
@@ -1813,7 +1858,9 @@ button {
   margin-bottom: 14px;
 }
 .news__long-desc h4 {
+  font-weight: 500;
   font-size: 16px;
+  line-height: 1.2;
   margin-bottom: 4px;
 }
 .news__long-desc p,
@@ -1873,6 +1920,10 @@ button {
 @media (max-width: 1023.5px) {
   .news {
     padding-block: 40px;
+  }
+  .news__list, .news__content {
+    width: 100vw;
+    margin-left: -16px;
   }
   .news__content {
     padding: 40px 16px;
@@ -2001,12 +2052,12 @@ button {
   font-size: 32px;
   line-height: 1.1;
   position: absolute;
-  left: -2em;
+  left: -1.2em;
 }
 .policy__text > ol ol li::before {
   content: counter(li) "." counter(lili) ".";
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.2;
   left: -2.5em;
 }
@@ -2028,6 +2079,10 @@ button {
   }
   .policy__text {
     padding-block: 8px 32px;
+    padding-left: 2em;
+  }
+  .policy__text #p-1 > *:not(h2) {
+    margin-left: -3.7em;
   }
   .policy__text h2 {
     font-size: 24px;
@@ -2037,21 +2092,30 @@ button {
   .policy__text > ol ol ol ol {
     padding-left: 0;
   }
+  .policy__text > ol li::before {
+    font-size: 24px;
+    left: -2.5em;
+  }
   .policy__text > ol ol li::before,
   .policy__text > ol ol ol li::before,
   .policy__text > ol ol ol ol li::before {
-    left: -4em;
+    left: -3.75em;
   }
 }
 @media (max-width: 599.5px) {
   .policy__text {
     padding-block: 0 24px;
+    padding-left: 0;
   }
   .policy__text h2 {
     font-size: 18px;
   }
   .policy__text > ol {
     padding-left: 4em;
+  }
+  .policy__text > ol li::before {
+    font-size: 18px;
+    left: -3.4em;
   }
 }
 .modal {

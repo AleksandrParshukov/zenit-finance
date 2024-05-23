@@ -95,8 +95,7 @@
     }
 
     h2,
-    h3,
-    h4 {
+    h3 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
       line-height: 1.1;
@@ -113,7 +112,9 @@
     }
 
     h4 {
+      font-weight: 500;
       font-size: 16px;
+      line-height: 1.2;
       margin-bottom: 4px;
     }
 
@@ -191,6 +192,12 @@
 @media (max-width: $md) {
   .news {
     padding-block: 40px;
+
+    &__list,
+    &__content {
+      width: 100vw;
+      margin-left: -16px;
+    }
 
     &__content {
       padding: 40px 16px;

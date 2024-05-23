@@ -61,11 +61,11 @@
     &.error {
       border-color: $error;
     }
-  }
 
-  ::placeholder {
-    color: $primary-muted;
-    opacity: 1;
+    &::placeholder {
+      color: $primary-muted;
+      opacity: 1;
+    }
   }
 
   ::-ms-input-placeholder {

@@ -110,14 +110,14 @@
       font-size: 32px;
       line-height: 1.1;
       position: absolute;
-      left: -2em;
+      left: -1.2em;
     }
 
     > ol ol li::before {
       content: counter(li) '.' counter(lili) '.';
       // counter-increment: lili;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1em;
       line-height: 1.2;
       left: -2.5em;
     }
@@ -150,6 +150,11 @@
 
     &__text {
       padding-block: 8px 32px;
+      padding-left: 2em;
+
+      #p-1 > *:not(h2) {
+        margin-left: -3.7em;
+      }
 
       h2 {
         font-size: 24px;
@@ -161,10 +166,15 @@
         padding-left: 0;
       }
 
+      > ol li::before {
+        font-size: 24px;
+        left: -2.5em;
+      }
+
       > ol ol li::before,
       > ol ol ol li::before,
       > ol ol ol ol li::before {
-        left: -4em;
+        left: -3.75em;
       }
     }
   }
@@ -174,6 +184,7 @@
   .policy {
     &__text {
       padding-block: 0 24px;
+      padding-left: 0;
 
       h2 {
         font-size: 18px;
@@ -181,6 +192,11 @@
 
       > ol {
         padding-left: 4em;
+      }
+
+      > ol li::before {
+        font-size: 18px;
+        left: -3.4em;
       }
     }
   }

@@ -54,6 +54,8 @@
 
 @media (max-width: $sm) {
   .advantages {
-    padding-block: 32px;
+    &__list {
+      padding-block: 32px;
+    }
   }
 }
