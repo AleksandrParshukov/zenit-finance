@@ -380,6 +380,10 @@ button {
     display: block;
   }
 }
+.main {
+  position: relative;
+  z-index: 0;
+}
 .main--products .page-top__img > img {
   margin-right: 95px;
 }
